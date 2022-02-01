@@ -1,10 +1,23 @@
-import './NavBar.css'
+import './navbar.css';
+import Logo from './images/logonegro.png';
 
-function Navbar(){
+const Navbar = ()=>{
     return(
-        <div>
-            
-        </div>
+        <nav className="navBar">
+            <div className="divLogo">
+                <img src={Logo} className="logoNav" alt="logo"/>
+            </div>
+            <div className="menu">
+                <ul className="menuLista">
+                    <li className="itemLista">Carteras</li>
+                    <li className="itemLista">Bandoleras</li>
+                    <li className="itemLista">Mochilas</li>
+                </ul>
+            </div>
+            <div>
+
+            </div>
+        </nav>
     );
 };
 
