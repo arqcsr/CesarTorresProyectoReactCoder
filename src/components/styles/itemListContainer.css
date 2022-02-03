@@ -1,0 +1,7 @@
+.itemContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+}

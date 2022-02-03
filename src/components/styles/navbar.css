@@ -1,3 +1,13 @@
+/* ----------GENERAL RESET-------------- */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    }
+
 .navBar{
     background-color: #FFE8E3;
     display: flex;
@@ -6,22 +16,33 @@
     align-content: center;
 }
 .divLogo{
+    display: flex;
+    flex-direction: column;
     align-content: center;
+    justify-content: center;
 }
 .logoNav{
-    margin-top: 5px;
     height: 40px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
 .menuLista{
     display: flex;
     flex-direction: row;
-    
 }
 .itemLista{
     text-decoration: none;
     list-style: none;
     margin-right: 10px;
     margin-left: 10px;
+    font-size: 1.5rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
 
 }
