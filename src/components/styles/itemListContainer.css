@@ -1,7 +1,8 @@
 .itemContainer{
     display: flex;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     font-size: 2rem;
     font-weight: 800;
 }

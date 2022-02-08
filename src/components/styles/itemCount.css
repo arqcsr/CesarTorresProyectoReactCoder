@@ -1,0 +1,36 @@
+.counterCountainer{
+    margin-top: 30px;
+    display:flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.quantityCountainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.plusMinusButtton{
+    border: none;
+    background-color: white;
+    width: 40%;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.plusMinusButtton:active{
+    background-color: #FFE8E3;
+}
+
+.addCartButton{
+    background-color: #FFE8E3;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
