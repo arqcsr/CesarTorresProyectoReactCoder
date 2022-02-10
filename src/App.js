@@ -5,10 +5,11 @@ const App= ()=>{
   return (
     <>
     <Navbar />
-    <ItemListContainer contentmessage="Hello world, Im triying to be a React App" />
+    <ItemListContainer contentmessage="Productos disponibles" />
     </>
     
   );
 }
+
 
 export default App;

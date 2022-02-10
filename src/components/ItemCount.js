@@ -10,7 +10,7 @@ const ItemCount = ({stock, initial})=>{
     const increase = ()=>{
         if(quantity<stock){
             setQuantity(quantity + 2);
-            console.log (quantity);
+            /* console.log (quantity); */
         }
     };
 

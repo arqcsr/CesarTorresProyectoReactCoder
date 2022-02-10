@@ -1,12 +1,14 @@
 import './styles/itemListContainer.css'
 import ItemCount from './ItemCount';
+import ItemList from './ItemList';
 
 
 const ItemListContainer = ({contentmessage})=>{
     return(
         <div className="itemContainer">
             {contentmessage}
-            <ItemCount stock="5" initial={Number(1)} />
+            <ItemList />
+            <ItemCount stock={5} initial={1} />
         </div>
     );
 }
