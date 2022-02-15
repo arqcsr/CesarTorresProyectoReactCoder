@@ -106,7 +106,7 @@ const [products, setProducts] = useState ([]);
 
     function getProducts(){
         customFetch(2000, data)
-        .then(data=> setProducts(data))
+        .then(()=> setProducts(data))
         .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
     }
     

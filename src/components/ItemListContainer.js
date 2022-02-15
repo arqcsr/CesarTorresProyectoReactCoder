@@ -8,7 +8,6 @@ const ItemListContainer = ({contentmessage})=>{
         <div className="itemContainer">
             {contentmessage}
             <ItemList />
-            <ItemCount stock={5} initial={1} />
         </div>
     );
 }

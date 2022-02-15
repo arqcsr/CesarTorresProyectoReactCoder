@@ -1,0 +1,46 @@
+.itemDetailCountainer{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.itemdetailImageCountainer{
+    width: 30%;
+    margin-right: 30px;
+}
+
+.itemDetailImage{
+    width: 100%;
+}
+.itemDetailDescriptionCountainer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    padding-left: 50px;
+    border-style: solid;
+    border-width: 1px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-color: grey;
+    justify-content: center;
+}
+
+.itemDetailName{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.itemDetailDescription{
+    font-size: 1.3rem;
+}
+
+.itemDetailPrice{
+    margin-top: 30px;
+    font-size: 2.3rem;
+    font-weight: 500;
+    align-self: center;
+}
