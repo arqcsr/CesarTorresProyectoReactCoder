@@ -37,12 +37,16 @@ html{
     flex-direction: row;
 }
 .itemLista{
-    text-decoration: none;
     list-style: none;
     margin-right: 10px;
     margin-left: 10px;
     font-size: 1.5rem;
     margin-top: 16px;
     margin-bottom: 16px;
+    color: black;
+    text-decoration: none;
+}
 
+a{
+    text-decoration: none;
 }

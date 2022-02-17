@@ -10,12 +10,14 @@ import image7 from "./images/007.JPG";
 import image8 from "./images/008.JPG";
 import image9 from "./images/009.JPG";
 import './styles/itemList.css'
+import { useParams } from "react-router-dom";
 
 /* array con datos de productos */
 
 const itemsData = [
     {
         id:"01",
+        category: "1",
         itemImage:image1,
         itemName:"Bandolera Borla Azul",
         itemPrice:"35 USD",
@@ -23,6 +25,7 @@ const itemsData = [
     },
     {
         id:"02",
+        category: "1",
         itemImage:image2,
         itemName:"Bandolera Jardin Mostaza",
         itemPrice:"33 USD",
@@ -30,6 +33,7 @@ const itemsData = [
     },
     {
         id:"03",
+        category: "1",
         itemImage:image3,
         itemName:"Bandolera Organic Rosa",
         itemPrice:"36 USD",
@@ -37,6 +41,7 @@ const itemsData = [
     },
     {
         id:"04",
+        category: "2",
         itemImage:image4,
         itemName:"Marinera Borla Negra",
         itemPrice:"45 USD",
@@ -44,6 +49,7 @@ const itemsData = [
     },
     {
         id:"05",
+        category: "2",
         itemImage:image5,
         itemName:"Cartera Tote Suela",
         itemPrice:"48 USD",
@@ -51,6 +57,7 @@ const itemsData = [
     },
     {
         id:"06",
+        category: "2",
         itemImage:image6,
         itemName:"Cartera Jardin Beige",
         itemPrice:"45 USD",
@@ -58,6 +65,7 @@ const itemsData = [
     },
     {
         id:"07",
+        category: "3",
         itemImage:image7,
         itemName:"Mochila Jardin Negra",
         itemPrice:"45 USD",
@@ -65,6 +73,7 @@ const itemsData = [
     },
     {
         id:"08",
+        category: "3",
         itemImage:image8,
         itemName:"Mochila Borla Azul",
         itemPrice:"42 USD",
@@ -72,6 +81,7 @@ const itemsData = [
     },
     {
         id:"09",
+        category: "3",
         itemImage:image9,
         itemName:"Mochila Organic Suela",
         itemPrice:"45 USD",
@@ -104,8 +114,11 @@ const ItemList = ()=> {
 
 const [products, setProducts] = useState ([]);
 
+const {idCategory} = useParams();
+console.log(idCategory);
+
     function getProducts(){
-        customFetch(2000, data)
+        customFetch(2000, data.filter(items => items.category===idCategory))
         .then(()=> setProducts(data))
         .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
     }
