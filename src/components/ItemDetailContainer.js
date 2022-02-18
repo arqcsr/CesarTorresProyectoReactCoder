@@ -1,6 +1,7 @@
 import ItemDetail from './ItemDetail';
 import image1 from'./images/001.JPG'
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 /* array con detalle de producto */
 
@@ -45,13 +46,16 @@ const ItemDetailContainer = ()=>{
 
     const[product,setProduct]=useState([]);
 
+    const{idDetail} = useParams
+    console.log(idDetail)
+
     function getProduct(){
-        customFetch(3000, itemDetailData)
+        customFetch(3000, itemDetailData.filter(item=>item.id = idDetail))
         .then(itemDetailData=> setProduct(itemDetailData))
         .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
     };
 
-    useEffect(getProduct,[]);
+    useEffect(getProduct,[idDetail]);
 
     return(
         <section>
