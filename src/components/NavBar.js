@@ -11,9 +11,9 @@ const Navbar = ()=>{
             </div>
             <div className="menu">
                 <ul className="menuLista">
-                    <Link to="/category/2"><li className="itemLista">Carteras</li></Link>
-                    <Link to="/category/1"><li className="itemLista">Bandoleras</li></Link>
-                    <Link to="/category/3"><li className="itemLista">Mochilas</li></Link>
+                    <Link to="/category/carteras"><li className="itemLista">Carteras</li></Link>
+                    <Link to="/category/bandoleras"><li className="itemLista">Bandoleras</li></Link>
+                    <Link to="/category/mochilas"><li className="itemLista">Mochilas</li></Link>
                 </ul>
             </div>
             <div>

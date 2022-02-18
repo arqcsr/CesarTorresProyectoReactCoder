@@ -47,7 +47,7 @@ const ItemDetailContainer = ()=>{
 
     function getProduct(){
         customFetch(3000, itemDetailData)
-        .then(data=> setProduct(itemDetailData))
+        .then(itemDetailData=> setProduct(itemDetailData))
         .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
     };
 

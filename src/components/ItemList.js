@@ -17,7 +17,7 @@ import { useParams } from "react-router-dom";
 const itemsData = [
     {
         id:"01",
-        category: "1",
+        category:"bandoleras",
         itemImage:image1,
         itemName:"Bandolera Borla Azul",
         itemPrice:"35 USD",
@@ -25,7 +25,7 @@ const itemsData = [
     },
     {
         id:"02",
-        category: "1",
+        category:"bandoleras",
         itemImage:image2,
         itemName:"Bandolera Jardin Mostaza",
         itemPrice:"33 USD",
@@ -33,7 +33,7 @@ const itemsData = [
     },
     {
         id:"03",
-        category: "1",
+        category:"bandoleras",
         itemImage:image3,
         itemName:"Bandolera Organic Rosa",
         itemPrice:"36 USD",
@@ -41,7 +41,7 @@ const itemsData = [
     },
     {
         id:"04",
-        category: "2",
+        category:"carteras",
         itemImage:image4,
         itemName:"Marinera Borla Negra",
         itemPrice:"45 USD",
@@ -49,7 +49,7 @@ const itemsData = [
     },
     {
         id:"05",
-        category: "2",
+        category:"carteras",
         itemImage:image5,
         itemName:"Cartera Tote Suela",
         itemPrice:"48 USD",
@@ -57,7 +57,7 @@ const itemsData = [
     },
     {
         id:"06",
-        category: "2",
+        category:"carteras",
         itemImage:image6,
         itemName:"Cartera Jardin Beige",
         itemPrice:"45 USD",
@@ -65,7 +65,7 @@ const itemsData = [
     },
     {
         id:"07",
-        category: "3",
+        category:"mochilas",
         itemImage:image7,
         itemName:"Mochila Jardin Negra",
         itemPrice:"45 USD",
@@ -73,7 +73,7 @@ const itemsData = [
     },
     {
         id:"08",
-        category: "3",
+        category:"mochilas",
         itemImage:image8,
         itemName:"Mochila Borla Azul",
         itemPrice:"42 USD",
@@ -81,7 +81,7 @@ const itemsData = [
     },
     {
         id:"09",
-        category: "3",
+        category: "mochilas",
         itemImage:image9,
         itemName:"Mochila Organic Suela",
         itemPrice:"45 USD",
@@ -114,23 +114,31 @@ const ItemList = ()=> {
 
 const [products, setProducts] = useState ([]);
 
-const {idCategory} = useParams();
-console.log(idCategory);
+const {idCategory}=useParams();
+
+/* prueba del useParams
+console.log(idCategory); */
 
     function getProducts(){
-        customFetch(2000, data.filter(items => items.category===idCategory))
-        .then(()=> setProducts(data))
-        .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
+        if(idCategory === undefined){
+            customFetch(2000, data)
+            .then(data=> setProducts(data))
+            .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
+        }else{
+            customFetch(2000, data.filter(item=>item.category === idCategory))
+            .then(data=> setProducts(data))
+            .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
+        }
     }
     
     /* prueba de useEffect con setTimeout */
-/*     useEffect(()=>{
+    /*useEffect(()=>{
         setTimeout(()=>{
             getProducts()
         },5000)
     }, []); */
 
-    useEffect(getProducts,[]);
+    useEffect(getProducts,[idCategory]);
 
 
     return(

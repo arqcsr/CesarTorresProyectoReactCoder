@@ -10,8 +10,8 @@ const App= ()=>{
         <Navbar />
         <Routes>
           <Route path="/" element={<ItemListContainer contentmessage="Productos disponibles" /> }/> 
-          <Route path="/category/:idCategory" element={<ItemListContainer contentmessage="Productos disponibles" /> }/> 
-          <Route path="/item" element={<ItemDetailContainer />}/>
+          <Route path="/category/:idCategory" element={<ItemListContainer contentmessage="Productos filtrados" /> }/> 
+          <Route path="/item/" element={<ItemDetailContainer />}/>
         </Routes>
       </>
     </BrowserRouter>
