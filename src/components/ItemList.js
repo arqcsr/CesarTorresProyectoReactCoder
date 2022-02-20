@@ -147,6 +147,7 @@ console.log(idCategory); */
                 products.map(item=>
                     <Item 
                     className="itemProduct"
+                    id={item.id}
                     key={item.id}
                     itemImage={item.itemImage}
                     itemName={item.itemName}
