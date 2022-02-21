@@ -1,10 +1,9 @@
 import { useState } from "react";
 import './styles/itemCount.css'
 
-let quantity
+const ItemCount = ({stock, initial, onAdd})=>{
 
-const ItemCount = ({stock, initial})=>{
-
+    
     const [quantity, setQuantity] = useState (initial);
 
     const increase = ()=>{
@@ -18,10 +17,6 @@ const ItemCount = ({stock, initial})=>{
         if (quantity>1){
             setQuantity(quantity-1);
         }
-    };
-
-    const onAdd = ()=>{
-        alert("Has agragado al carrito " + quantity + " unidades")
     };
 
     return(

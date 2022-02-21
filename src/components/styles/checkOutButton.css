@@ -1,0 +1,14 @@
+.checkOutButton{
+    background-color: lightgray;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.checkOutButton:active{
+    background-color: #FFB8A8;
+}

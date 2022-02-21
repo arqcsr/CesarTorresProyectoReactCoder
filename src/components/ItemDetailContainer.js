@@ -192,7 +192,7 @@ const ItemDetailContainer = ()=>{
     const[product,setProduct]=useState([]);
 
     const{idDetail} = useParams();
-    console.log(idDetail);
+    //console.log(idDetail); prueba del useParams
 
     function getProduct(){
         customFetch(500, data2.filter(itemDetail=>itemDetail.id === idDetail))
