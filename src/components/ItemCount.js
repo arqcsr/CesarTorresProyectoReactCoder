@@ -1,14 +1,10 @@
-import { useState } from "react";
 import './styles/itemCount.css'
 
-const ItemCount = ({stock, initial, onAdd})=>{
-
-    
-    const [quantity, setQuantity] = useState (initial);
+const ItemCount = ({stock, initial, onAdd, quantity, setQuantity})=>{
 
     const increase = ()=>{
         if(quantity<stock){
-            setQuantity(quantity + 2);
+            setQuantity(quantity + 1);
             /* console.log (quantity); */
         }
     };

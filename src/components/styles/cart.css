@@ -1,0 +1,82 @@
+.cartSection{
+    margin-top: 30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartSection h2{
+    font-size: 2.5rem;
+    padding: 30px;
+}
+
+.cartCountainer{
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    gap: 80px;
+}
+
+.cartImageCountainer{
+    width: 300px;
+}
+
+.cartImage{
+    width: 100%;
+}
+
+.amountCountainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amountName{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.amount{
+    font-size: 1rem;
+}
+
+.priceCountainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.priceName{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.price{
+    font-size: 1rem;
+}
+
+.subtotalCountainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtotalName{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.subtotal{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.name{
+    font-size: 1.8rem;
+    font-weight: 800;
+}
