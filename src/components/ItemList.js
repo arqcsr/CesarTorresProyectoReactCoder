@@ -1,14 +1,5 @@
 import Item from "./Item";
 import { useState, useEffect } from "react";
-import image1 from "./images/001.JPG";
-import image2 from "./images/002.JPG";
-import image3 from "./images/003.JPG";
-import image4 from "./images/004.JPG";
-import image5 from "./images/005.JPG";
-import image6 from "./images/006.JPG";
-import image7 from "./images/007.JPG";
-import image8 from "./images/008.JPG";
-import image9 from "./images/009.JPG";
 import './styles/itemList.css'
 import { useParams } from "react-router-dom";
 
@@ -18,7 +9,7 @@ const itemsData = [
     {
         id:"01",
         category:"bandoleras",
-        itemImage:image1,
+        itemImage:"/images/001.JPG",
         itemName:"Bandolera Borla Azul",
         itemPrice:"35 USD",
         itemStock:"3"
@@ -26,7 +17,7 @@ const itemsData = [
     {
         id:"02",
         category:"bandoleras",
-        itemImage:image2,
+        itemImage:"/images/002.JPG",
         itemName:"Bandolera Jardin Mostaza",
         itemPrice:"33 USD",
         itemStock:"8"
@@ -34,7 +25,7 @@ const itemsData = [
     {
         id:"03",
         category:"bandoleras",
-        itemImage:image3,
+        itemImage:"/images/003.JPG",
         itemName:"Bandolera Organic Rosa",
         itemPrice:"36 USD",
         itemStock:"7"
@@ -42,7 +33,7 @@ const itemsData = [
     {
         id:"04",
         category:"carteras",
-        itemImage:image4,
+        itemImage:"/images/004.JPG",
         itemName:"Marinera Borla Negra",
         itemPrice:"45 USD",
         itemStock:"6"
@@ -50,7 +41,7 @@ const itemsData = [
     {
         id:"05",
         category:"carteras",
-        itemImage:image5,
+        itemImage:"/images/005.JPG",
         itemName:"Cartera Tote Suela",
         itemPrice:"48 USD",
         itemStock:"2"
@@ -58,7 +49,7 @@ const itemsData = [
     {
         id:"06",
         category:"carteras",
-        itemImage:image6,
+        itemImage:"/images/006.JPG",
         itemName:"Cartera Jardin Beige",
         itemPrice:"45 USD",
         itemStock:"4"
@@ -66,7 +57,7 @@ const itemsData = [
     {
         id:"07",
         category:"mochilas",
-        itemImage:image7,
+        itemImage:"/images/007.JPG",
         itemName:"Mochila Jardin Negra",
         itemPrice:"45 USD",
         itemStock:"10"
@@ -74,7 +65,7 @@ const itemsData = [
     {
         id:"08",
         category:"mochilas",
-        itemImage:image8,
+        itemImage:"/images/008.JPG",
         itemName:"Mochila Borla Azul",
         itemPrice:"42 USD",
         itemStock:"12"
@@ -82,7 +73,7 @@ const itemsData = [
     {
         id:"09",
         category: "mochilas",
-        itemImage:image9,
+        itemImage:"/images/009.JPG",
         itemName:"Mochila Organic Suela",
         itemPrice:"45 USD",
         itemStock:"8"

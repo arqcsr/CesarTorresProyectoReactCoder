@@ -1,13 +1,4 @@
 import ItemDetail from './ItemDetail';
-import image1 from'./images/001.JPG';
-import image2 from "./images/002.JPG";
-import image3 from "./images/003.JPG";
-import image4 from "./images/004.JPG";
-import image5 from "./images/005.JPG";
-import image6 from "./images/006.JPG";
-import image7 from "./images/007.JPG";
-import image8 from "./images/008.JPG";
-import image9 from "./images/009.JPG";
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -16,7 +7,7 @@ import { useParams } from 'react-router-dom';
 const itemDetailData = [
     {
         id:"01",
-        itemDetailImage:image1,
+        itemDetailImage:"/images/001.JPG",
         itemDetailName:"Bandolera Borla Azul",
         itemDetaildescription:
             <ul>
@@ -33,7 +24,7 @@ const itemDetailData = [
     },
     {
         id:"02",
-        itemDetailImage:image2,
+        itemDetailImage:"/images/002.JPG",
         itemDetailName:"Bandolera Jardin Mostaza",
         itemDetaildescription:
             <ul>
@@ -50,7 +41,7 @@ const itemDetailData = [
     },
     {
         id:"03",
-        itemDetailImage:image3,
+        itemDetailImage:"/images/003.JPG",
         itemDetailName:"Bandolera Organic Rosa",
         itemDetaildescription:
             <ul>
@@ -67,7 +58,7 @@ const itemDetailData = [
     },
     {
         id:"04",
-        itemDetailImage:image4,
+        itemDetailImage:"/images/004.JPG",
         itemDetailName:"Marinera Borla Negra",
         itemDetaildescription:
             <ul>
@@ -84,7 +75,7 @@ const itemDetailData = [
     },
     {
         id:"05",
-        itemDetailImage:image5,
+        itemDetailImage:"/images/005.JPG",
         itemDetailName:"Cartera Tote Suela",
         itemDetaildescription:
             <ul>
@@ -101,7 +92,7 @@ const itemDetailData = [
     },
     {
         id:"06",
-        itemDetailImage:image6,
+        itemDetailImage:"/images/006.JPG",
         itemDetailName:"Cartera Jardin Beige",
         itemDetaildescription:
             <ul>
@@ -118,7 +109,7 @@ const itemDetailData = [
     },
     {
         id:"07",
-        itemDetailImage:image7,
+        itemDetailImage:"/images/007.JPG",
         itemDetailName:"Mochila Jardin Negra",
         itemDetaildescription:
             <ul>
@@ -135,7 +126,7 @@ const itemDetailData = [
     },
     {
         id:"08",
-        itemDetailImage:image8,
+        itemDetailImage:"/images/008.JPG",
         itemDetailName:"Mochila Borla Azul",
         itemDetaildescription:
             <ul>
@@ -152,7 +143,7 @@ const itemDetailData = [
     },
     {
         id:"09",
-        itemDetailImage:image9,
+        itemDetailImage:"/images/009.JPG",
         itemDetailName:"Mochila Organic Suela",
         itemDetaildescription:
             <ul>
