@@ -7,18 +7,11 @@ const CartContextProvider=({children})=>{
     const[cartlist,setCartlist] = useState([]);
     
     const addToCart = (props, quantity)=>{
-        const productDuplicated = cartlist.find((duplicated) => duplicated.id === props.id)
+        let productDuplicated = cartlist.find((duplicated) => duplicated.id === props.id)
             if(productDuplicated)
             {
-                setCartlist(
-                    cartlist.map((duplicated) =>{
-                        return(
-                            {...duplicated, quantity:duplicated.quantity+quantity}
-                        )
-                    })
-                )
-                /* console.log(productDuplicated);
-                console.log(props.id); */ //prueba de funcion
+                productDuplicated.quantity += quantity;
+                productDuplicated.subtotal = ((parseInt(productDuplicated.quantity)*parseInt(productDuplicated.price)))
             }else{
                 setCartlist(
                     [
@@ -32,7 +25,7 @@ const CartContextProvider=({children})=>{
                             subtotal: ((parseInt(quantity)*parseInt(props.itemDetailPrice))),
                         }
                     ]
-                );
+                )
             }
     };
 
@@ -46,9 +39,17 @@ const CartContextProvider=({children})=>{
 
     const clear = ()=>{
         setCartlist([]);
-    }
+    };
+
+/*     let subTotalCalc = ()=>{
+        let subtotalDom = cartlist.map(subTotal => subTotal.subtotal);
+        return(
+            subtotalDom.reduce((previousValue, currentValue)=>previousValue+currentValue)
+        )
+    }; */
+
     return(
-        <CartContext.Provider value={{cartlist, addToCart, removeItem, clear}}>
+        <CartContext.Provider value={{cartlist, addToCart, removeItem, clear,/* subTotalCalc */}}>
             {children}
         </CartContext.Provider>
     )
