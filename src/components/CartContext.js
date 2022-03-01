@@ -40,16 +40,10 @@ const CartContextProvider=({children})=>{
     const clear = ()=>{
         setCartlist([]);
     };
-
-/*     let subTotalCalc = ()=>{
-        let subtotalDom = cartlist.map(subTotal => subTotal.subtotal);
-        return(
-            subtotalDom.reduce((previousValue, currentValue)=>previousValue+currentValue)
-        )
-    }; */
+    
 
     return(
-        <CartContext.Provider value={{cartlist, addToCart, removeItem, clear,/* subTotalCalc */}}>
+        <CartContext.Provider value={{cartlist, addToCart, removeItem, clear}}>
             {children}
         </CartContext.Provider>
     )

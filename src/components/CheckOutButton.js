@@ -3,7 +3,7 @@ import "./styles/checkOutButton.css";
 
 const CheckOutButton =()=>{
     return(
-        <Link to="/cart"><button className="checkOutButton">Ir al carrito</button></Link> 
+        <Link to="/cart"><button className="checkOutButton">Terminar la compra</button></Link> 
     )
 
 };

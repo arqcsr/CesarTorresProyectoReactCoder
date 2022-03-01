@@ -3,17 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { CartContext } from "./CartContext";
 import "./styles/cart.css"
+import { Link } from "react-router-dom";
 
 
 
 const Cart = ()=>{
 
     const context = useContext(CartContext);
+    console.log(context.cartlist.length)
 
     return (
         <section className="cartSection">
-            <h2>Tu carrito</h2>
-            {
+            <h2 className="cartSectionTitle">Tu carrito</h2>
+            {context.cartlist.length > 0 ?
                 context.cartlist.map((item) => (
                 <article key={item.id} className="cartCountainer">
                     <div className="cartImageCountainer">
@@ -39,8 +41,32 @@ const Cart = ()=>{
                     </div>
                 </article>
                 ))
+                :<div className="noProductsCountainer">
+                    <span className="noProducts">Tu carrito esta vacío 😢</span>
+                    <Link to="/"><button className="noProductsButton">Ir a la tienda</button></Link>
+                </div>
             }
-            <button className="clearCartButton" onClick={context.clear}>Eliminar carrito</button>
+            {
+                context.cartlist.length > 0 &&
+                <div className="totalPurchaseCountainer">
+                    <h2 className="totalPurchaseTitle">TOTAL DE TU COMPRA</h2>
+                    <div>
+                        <span className="totalPurchaseItems">SUB TOTAL: {context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0)} USD</span>
+                    </div>
+                    <div>
+                        <span className="totalPurchaseItems">IVA 16%: {context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0)*.16} USD</span>
+                    </div>
+                    <div className="totalPurchaseItemsTotalCountainer">
+                        <span className="totalPurchaseItemsTotal">TOTAL: {context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0) + context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0)*.16} USD</span>
+                    </div>
+                    <button className="purchase">FINALIZAR COMPRA</button>
+                    <Link to="/"><button className="keepOnBuying">SEGUIR COMPRANDO</button></Link>
+                </div>
+            }
+            {
+                context.cartlist.length > 0 &&
+                <button className="clearCartButton" onClick={context.clear}>Eliminar carrito</button>
+            }
         </section>
     );
 };

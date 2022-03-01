@@ -10,9 +10,10 @@
 
 .iconCart{
     align-self: center;
+    color: black;
 }
 
-.cartConter{
+.cartCounter{
     display: flex;
     background-color: #FFB8A8;
     padding: 10px;
@@ -20,7 +21,7 @@
     height: 30px
 }
 
-.cartConter span{
+.cartCounter span{
     align-self: center;
     font-size: 1.5rem;
 }
