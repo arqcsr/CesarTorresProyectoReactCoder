@@ -22,7 +22,7 @@ const Cart = ()=>{
                         <img className="cartImage" src={item.image} alt="asdas" />
                     </div>
                     <div className="nameCountainer">
-                        <span className="name">{item.itemName}</span>
+                        <span className="name">{item.name}</span>
                     </div>
                     <div className="amountCountainer">
                         <span className="amountName">Cantidad</span>

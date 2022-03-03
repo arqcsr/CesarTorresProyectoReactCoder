@@ -18,11 +18,11 @@ const CartContextProvider=({children})=>{
                         ...cartlist,
                         {
                             id:props.id,
-                            image: props.itemDetailImage,
-                            itemName: props.itemDetailName,
+                            image: props.image,
+                            itemName: props.name,
                             quantity: quantity,
-                            price: props.itemDetailPrice,
-                            subtotal: ((parseInt(quantity)*parseInt(props.itemDetailPrice))),
+                            price: props.price,
+                            subtotal: ((parseInt(quantity)*parseInt(props.price))),
                         }
                     ]
                 )
