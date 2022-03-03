@@ -25,14 +25,14 @@ const Itemdetail = (props)=>{
     return(
         <article className="itemDetailCountainer">
             <div className="itemdetailImageCountainer">
-                <img src={props.itemDetailImage} className="itemDetailImage" alt=""></img>
+                <img src={props.image} className="itemDetailImage" alt=""></img>
             </div>
             <div className="itemDetailDescriptionCountainer">
-                <h2 className="itemDetailName">{props.itemDetailName}</h2>
-                <div className="itemDetailDescription">{props.itemDetaildescription}</div>
-                <span className="itemDetailPrice">Precio: {props.itemDetailPrice}</span>
+                <h2 className="itemDetailName">{props.name}</h2>
+                <div className="itemDetailDescription">{props.description}</div>
+                <span className="itemDetailPrice">Precio: {props.price}</span>
                 {buttonCount === true
-                    ? <ItemCount stock={props.itemDetailStock} initial={1} onAdd={onAdd} quantity={quantity} setQuantity={setQuantity} />
+                    ? <ItemCount stock={props.stock} initial={1} onAdd={onAdd} quantity={quantity} setQuantity={setQuantity} />
                     : <CheckOutButton />
                 }
             </div>
