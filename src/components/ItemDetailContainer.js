@@ -1,10 +1,11 @@
 import ItemDetail from './ItemDetail';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import dataBase from '../utils/FirebaseConfig';
+import { collection, getDocs } from "firebase/firestore";
 
-/* array con detalle de producto */
-
-const itemDetailData = [
+///old array with database
+/* const itemDetailData = [
     {
         id:"01",
         category:"bandoleras",
@@ -167,11 +168,12 @@ const itemDetailData = [
         price:"45 USD",
         stock:"8"
     }
-];
+]; */
 
 
-/* promesa */
-let isOk = true;
+///old promise
+
+/* let isOk = true;
 let data2 = itemDetailData;
 
 const customFetch = (timeout, data2)=> {
@@ -184,8 +186,12 @@ const customFetch = (timeout, data2)=> {
             }
         },timeout)
     })
-};
+}; */
 
+/// old function with customFetch
+/*         customFetch(500, data2.filter(itemDetail=>itemDetail.id === idDetail))
+        .then(data2=> setProduct(data2))
+        .catch(error=>alert('Hubo un error. Ver los detalles aqui', error)) */
 
 const ItemDetailContainer = ()=>{
 
@@ -194,13 +200,19 @@ const ItemDetailContainer = ()=>{
     const{idDetail} = useParams();
     //console.log(idDetail); prueba del useParams
 
-    function getProduct(){
-        customFetch(500, data2.filter(itemDetail=>itemDetail.id === idDetail))
-        .then(data2=> setProduct(data2))
-        .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
-    };
 
-    useEffect(getProduct,[idDetail]);
+    useEffect(()=>{
+        const getProduct= async () =>{
+            const querySnapshot = await getDocs(collection(dataBase, "productsFch"));
+            return querySnapshot.docs.map(document =>({
+                id:document.id,
+                ...document.data()
+            })).filter(itemDetail=>itemDetail.id === idDetail)
+        }
+        getProduct()
+        .then(result => setProduct(result))
+        .catch(error => alert('Hubo un error. Ver los detalles aqui', error))
+    },[idDetail]);
 
 
     return(

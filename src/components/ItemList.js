@@ -2,10 +2,12 @@ import Item from "./Item";
 import { useState, useEffect } from "react";
 import './styles/itemList.css'
 import { useParams } from "react-router-dom";
+import dataBase from '../utils/FirebaseConfig';
+import { collection, getDocs } from "firebase/firestore";
 
-/* array con datos de productos */
+///old array with database
 
-const itemsData = [
+/* const itemsData = [
     {
         id:"01",
         category:"bandoleras",
@@ -169,11 +171,10 @@ const itemsData = [
         stock:"8"
     }
 
-];
+]; */
 
-/* promesa con datos */
-
-let isOk = true;
+///old promise
+/* let isOk = true;
 let data = itemsData;
 
 const customFetch = (timeout, data)=> {
@@ -186,7 +187,7 @@ const customFetch = (timeout, data)=> {
             }
         },timeout)
     })
-};
+}; */
 
 
 
@@ -200,7 +201,8 @@ const {idCategory}=useParams();
 /* prueba del useParams
 console.log(idCategory); */
 
-    function getProducts(){
+///old function
+/*     function getProducts(){
         if(idCategory === undefined){
             customFetch(2000, data)
             .then(data=> setProducts(data))
@@ -210,16 +212,36 @@ console.log(idCategory); */
             .then(data=> setProducts(data))
             .catch(error=>alert('Hubo un error. Ver los detalles aqui', error))
         }
-    }
+    } */
     
-    /* prueba de useEffect con setTimeout */
+    ///prueba de useEffect con setTimeout
     /*useEffect(()=>{
         setTimeout(()=>{
             getProducts()
         },5000)
     }, []); */
 
-    useEffect(getProducts,[idCategory]);
+    useEffect(() =>{
+        const getProducts = async ()=>{
+            if(idCategory === undefined){
+                const querySnapshot = await getDocs(collection(dataBase, "productsFch"));
+                return querySnapshot.docs.map(document =>({
+                    id:document.id,
+                    ...document.data()
+                }))
+            }else{
+                const querySnapshot = await getDocs(collection(dataBase, "productsFch"));
+                return querySnapshot.docs.map(document =>({
+                    id:document.id,
+                    ...document.data()
+                })).filter(items=>items.category === idCategory)
+            }
+        }
+        getProducts()
+        .then(result => setProducts(result))
+        .catch(error => alert('Hubo un error. Ver los detalles aqui', error))
+
+    },[idCategory]);
 
 
     return(
