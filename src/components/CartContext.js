@@ -31,17 +31,12 @@ const CartContextProvider=({children})=>{
 
     const removeItem =(element)=>{
         setCartlist(cartlist.filter(item=>item.id!==element));
-        console.log("prueba borrar");
-        console.log(element);
-        console.log(cartlist);
     };
-
 
     const clear = ()=>{
         setCartlist([]);
     };
     
-
     return(
         <CartContext.Provider value={{cartlist, addToCart, removeItem, clear}}>
             {children}

@@ -1,5 +1,4 @@
 import './styles/itemListContainer.css'
-import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 
 

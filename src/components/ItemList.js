@@ -5,8 +5,7 @@ import { useParams } from "react-router-dom";
 import dataBase from '../utils/FirebaseConfig';
 import { collection, getDocs } from "firebase/firestore";
 
-///old array with database
-
+///OLD ARRAY WITH DATABASE
 /* const itemsData = [
     {
         id:"01",
@@ -173,10 +172,9 @@ import { collection, getDocs } from "firebase/firestore";
 
 ]; */
 
-///old promise
+///OLD PROMISE
 /* let isOk = true;
 let data = itemsData;
-
 const customFetch = (timeout, data)=> {
     return new Promise((resolve, reject) =>{
         setTimeout(()=>{
@@ -198,10 +196,10 @@ const [products, setProducts] = useState ([]);
 
 const {idCategory}=useParams();
 
-/* prueba del useParams
-console.log(idCategory); */
+//USEPARAMS TEST
+/* console.log(idCategory); */
 
-///old function
+///OLD GETPRODUCTS FUNCTION
 /*     function getProducts(){
         if(idCategory === undefined){
             customFetch(2000, data)
@@ -214,7 +212,7 @@ console.log(idCategory); */
         }
     } */
     
-    ///prueba de useEffect con setTimeout
+    ///USEEFFECT TEST WITH SETTIMEOUT
     /*useEffect(()=>{
         setTimeout(()=>{
             getProducts()
@@ -239,7 +237,7 @@ console.log(idCategory); */
         }
         getProducts()
         .then(result => setProducts(result))
-        .catch(error => alert('Hubo un error. Ver los detalles aqui', error))
+        .catch(error => alert(error,': Hubo un error inesperado. Por favor intente más tarde', ))
 
     },[idCategory]);
 

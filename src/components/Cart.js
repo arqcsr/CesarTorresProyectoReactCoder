@@ -4,13 +4,50 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { CartContext } from "./CartContext";
 import "./styles/cart.css"
 import { Link } from "react-router-dom";
+import {collection, serverTimestamp, setDoc, doc, updateDoc, increment} from "firebase/firestore";
+import dataBase from '../utils/FirebaseConfig';
 
 
 
 const Cart = ()=>{
 
     const context = useContext(CartContext);
-    console.log(context.cartlist.length)
+
+    const createOrder=()=>{
+        let order={
+            buyer:{
+                name: "Sharon Stone",
+                phone: "123456789",
+                email: "sharonStone69@gmail.com",
+                adress:"Nowhere St.123, LA California, USA"
+            },
+            items:context.cartlist.map((cartItems)=>{
+                return{title:cartItems.itemName, id:cartItems.id, price:cartItems.price, quantity:cartItems.quantity}
+            }),
+            total:(context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0) + context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0)*.16).toFixed(2),
+            date:serverTimestamp()
+        };
+
+        //JUST FOR EDUCATIONAL PURPOSES
+        console.log(order);
+
+        const createOrderInFirestore= async ()=>{
+            const NewOrderRef = doc(collection(dataBase, "orders"))
+            await setDoc(NewOrderRef, order);
+            return NewOrderRef;
+        };
+
+        createOrderInFirestore()
+        .then(result => {
+            alert("Tu orden ha sido creada exitosamente. Nro de Orden: " + result.id);
+            context.cartlist.map( async (item)=>{
+                const itemRef = doc(dataBase, "productsFch", item.id);
+                await updateDoc(itemRef, {stock: increment(-item.quantity)});
+            });
+            context.clear();
+        })
+        .catch(error=>alert(error + ": Ha ocurrido un error, por favor intente más tarde"));
+    };
 
     return (
         <section className="cartSection">
@@ -51,15 +88,15 @@ const Cart = ()=>{
                 <div className="totalPurchaseCountainer">
                     <h2 className="totalPurchaseTitle">TOTAL DE TU COMPRA</h2>
                     <div>
-                        <span className="totalPurchaseItems">SUB TOTAL: {context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0)} USD</span>
+                        <span className="totalPurchaseItems">SUB TOTAL: {(context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0)).toFixed(2)} USD</span>
                     </div>
                     <div>
-                        <span className="totalPurchaseItems">IVA 16%: {context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0)*.16} USD</span>
+                        <span className="totalPurchaseItems">IVA 16%: {(context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0)*.16).toFixed(2)} USD</span>
                     </div>
                     <div className="totalPurchaseItemsTotalCountainer">
-                        <span className="totalPurchaseItemsTotal">TOTAL: {context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0) + context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0)*.16} USD</span>
+                        <span className="totalPurchaseItemsTotal">TOTAL: {(context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0) + context.cartlist.map(items => items.subtotal).reduce((a,b)=> a+b,0)*.16).toFixed(2)} USD</span>
                     </div>
-                    <button className="purchase">FINALIZAR COMPRA</button>
+                    <button className="purchase" onClick={createOrder}>FINALIZAR COMPRA</button>
                     <Link to="/"><button className="keepOnBuying">SEGUIR COMPRANDO</button></Link>
                 </div>
             }

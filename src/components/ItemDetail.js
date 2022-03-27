@@ -11,15 +11,10 @@ const Itemdetail = (props)=>{
     const [quantity, setQuantity] = useState (1);
     const context = useContext(CartContext);
 
-    //console.log(buttonCount); prueba del buttonCount
-
     const onAdd = ()=>{
         alert("Has agragado " + quantity + " unidades a tu carrito");
-        //console.log(quantity); prueba
         setButtonCount(false);
         context.addToCart(props, quantity);
-
-        //console.log(buttonCount); prueba del setButtonCount
     };
 
     return(

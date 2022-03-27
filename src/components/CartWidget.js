@@ -7,7 +7,6 @@ import { useContext } from "react";
 
 const CartWidget = ()=>{
     const context = useContext(CartContext);
-    /* console.log(context.cartlist.map(items => items.quantity).reduce((a,b)=> a+b,0)); prueba de la funcion para las cantidades*/
 
     return(
         <div className='cart'>

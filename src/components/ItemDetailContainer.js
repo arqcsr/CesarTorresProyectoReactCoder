@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import dataBase from '../utils/FirebaseConfig';
 import { collection, getDocs } from "firebase/firestore";
 
-///old array with database
+///OLD ARRAY WITH DATABASE
 /* const itemDetailData = [
     {
         id:"01",
@@ -171,11 +171,9 @@ import { collection, getDocs } from "firebase/firestore";
 ]; */
 
 
-///old promise
-
+///OLD PROMISE
 /* let isOk = true;
 let data2 = itemDetailData;
-
 const customFetch = (timeout, data2)=> {
     return new Promise((resolve, reject) =>{
         setTimeout(()=>{
@@ -188,8 +186,8 @@ const customFetch = (timeout, data2)=> {
     })
 }; */
 
-/// old function with customFetch
-/*         customFetch(500, data2.filter(itemDetail=>itemDetail.id === idDetail))
+/// OLD FUNTION WITH A CUSTOMFETCH
+/*      customFetch(500, data2.filter(itemDetail=>itemDetail.id === idDetail))
         .then(data2=> setProduct(data2))
         .catch(error=>alert('Hubo un error. Ver los detalles aqui', error)) */
 
@@ -198,7 +196,6 @@ const ItemDetailContainer = ()=>{
     const[product,setProduct]=useState([]);
 
     const{idDetail} = useParams();
-    //console.log(idDetail); prueba del useParams
 
 
     useEffect(()=>{
@@ -211,7 +208,7 @@ const ItemDetailContainer = ()=>{
         }
         getProduct()
         .then(result => setProduct(result))
-        .catch(error => alert('Hubo un error. Ver los detalles aqui', error))
+        .catch(error => alert(error, ': Hubo un error inesperado. Por favor intente más tarde'))
     },[idDetail]);
 
 

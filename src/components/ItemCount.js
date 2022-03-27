@@ -1,6 +1,6 @@
 import './styles/itemCount.css'
 
-const ItemCount = ({stock, initial, onAdd, quantity, setQuantity})=>{
+const ItemCount = ({stock, onAdd, quantity, setQuantity})=>{
 
     const increase = ()=>{
         if(quantity<stock){
