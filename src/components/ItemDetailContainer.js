@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import dataBase from '../utils/FirebaseConfig';
 import { collection, getDocs } from "firebase/firestore";
+import swal from 'sweetalert';
 
 ///OLD ARRAY WITH DATABASE
 /* const itemDetailData = [
@@ -208,7 +209,7 @@ const ItemDetailContainer = ()=>{
         }
         getProduct()
         .then(result => setProduct(result))
-        .catch(error => alert(error, ': Hubo un error inesperado. Por favor intente más tarde'))
+        .catch(error => swal(error, ': Hubo un error inesperado. Por favor intente más tarde'))
     },[idDetail]);
 
 

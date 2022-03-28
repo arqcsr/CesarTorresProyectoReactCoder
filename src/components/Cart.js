@@ -6,8 +6,7 @@ import "./styles/cart.css"
 import { Link } from "react-router-dom";
 import {collection, serverTimestamp, setDoc, doc, updateDoc, increment} from "firebase/firestore";
 import dataBase from '../utils/FirebaseConfig';
-
-
+import swal from 'sweetalert';
 
 const Cart = ()=>{
 
@@ -39,14 +38,14 @@ const Cart = ()=>{
 
         createOrderInFirestore()
         .then(result => {
-            alert("Tu orden ha sido creada exitosamente. Nro de Orden: " + result.id);
+            swal("Tu orden ha sido creada exitosamente","Nro de Orden: " + result.id, "success");
             context.cartlist.map( async (item)=>{
                 const itemRef = doc(dataBase, "productsFch", item.id);
                 await updateDoc(itemRef, {stock: increment(-item.quantity)});
             });
             context.clear();
         })
-        .catch(error=>alert(error + ": Ha ocurrido un error, por favor intente más tarde"));
+        .catch(error=>swal(error + ": Ha ocurrido un error, por favor intente más tarde"));
     };
 
     return (

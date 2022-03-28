@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { CartContext } from "./CartContext";
 import CheckOutButton from "./CheckOutButton";
 import ItemCount from "./ItemCount";
-import './styles/itemDetail.css'
+import './styles/itemDetail.css';
+import swal from 'sweetalert';
 
 
 const Itemdetail = (props)=>{
@@ -12,7 +13,7 @@ const Itemdetail = (props)=>{
     const context = useContext(CartContext);
 
     const onAdd = ()=>{
-        alert("Has agragado " + quantity + " unidades a tu carrito");
+        swal("Genial", "Has agragado " + quantity + " unidades a tu carrito", "success");
         setButtonCount(false);
         context.addToCart(props, quantity);
     };
