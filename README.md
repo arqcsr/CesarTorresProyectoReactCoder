@@ -44,7 +44,7 @@ https://nodejs.org/es/
 
 ### Pruebas🔧
 
-Para poder ejecutar la App debes ejecutar en la consola de VSC
+Para poder ejecutar la App debes descargar el repositorio y ejecutar en la consola de VSC
 
 ```
 npm start
