@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# E-Shop Flor de Chocolate 🏬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esta APP es el resultado del trabajo realizado en el curso de React JS en CODER HOUSE. 
 
-## Available Scripts
+A lo largo de 14 clases fuí construyendo esta app usando diferentes tecnologías como JS, React, HTML5, CSS3, etc.
 
-In the project directory, you can run:
+La idea principal era crear una SPA (Single Page Application) en la cual funcionara un E-commerce, siguiendo las pautas marcadas por el profesor y los tutores.
 
-### `npm start`
+En esta versión se van a encontrar con una APP limitada en algunas funciones, pero completamente operativa con manejo de base de datos alojada en Firebase desde la cual se maneja la información y el stock de los productos del E-commerce.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Comenzando 🚀
 
-### `npm test`
+Puedes descargar este repositorio para usos didácticos:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+https://github.com/arqcsr/CesarTorresProyectoReactCoder
+```
 
-### `npm run build`
+Puedes encontrar el curso de ReactJS de Coder House en:
+```
+https://latam.coderhouse.com/online/reactjs
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pre-requisitos 📋
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para poder ver este proyecto adecuadamente debes instalar NodeJs y tener un editor de código.
+Yo recomiendo Visual Studio Code.
 
-### `npm run eject`
+Link para descargar Visual Studio Code
+```
+https://code.visualstudio.com/
+```
+Link para descargar NodeJS
+```
+https://nodejs.org/es/
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Pruebas 🔧
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Para poder ejecutar la APP debes ejecutar en la consola de VSC
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm start
+```
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Despliegue 📦
+Puedes ver la APP deployada, en una versión minificada en:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+https://arqcsr.github.io/CesarTorresProyectoReactCoder/
+```
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Construido con 🛠️
 
-### Analyzing the Bundle Size
+Esta APP fue creada usando:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+* [NodeJS](https://nodejs.org/es/) - Como entorno para el manejo de Javascipt
+* [React](https://es.reactjs.org/) - Biblioteca de Javascipt par crear la interfaz SPA
+* [Font Awesome](https://fontawesome.com/) - Biblioteca de iconos 
+* [React Router Dom](https://www.npmjs.com/package/react-router-dom) - Paquete de NodeJs para el manejo de rutas y navegacion dentro de la APP 
+* [SweetAlert](https://sweetalert.js.org/) - Paquete generador de modales con stilos que reemplazan los típicos Alerts nativos del navegador.
+* [Firebase](https://firebase.google.com/?hl=es) - Firestore Database de Firebase, para el manejo de la base de datos de los productos del E-commerce y las ordenes de compra (hardcodeadas).
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Autores ✒️
 
-### Advanced Configuration
+El trabajo fue realizado completamente por mí (con mucho esfuerzo, dedicación y algunos dolores de cabeza🤓): 
+* **Cesar Torres** - *Autor / Desarrollador Frontend Junior* - [CesarTorres](https://github.com/arqcsr)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Con la ayuda y conocimientos del gran Profesor: 
+* **Alex Marin Mendez** - *Profesor de Coder House* - [alexmarinmendez](https://github.com/alexmarinmendez)
 
-### Deployment
+Y como no, los consejos y guía de 
+* **Manuel Sosa** - *Tutor de React Js en Coder House* - [Manuel Sosa](Lo siento Manuel en este momento no encuentro tu perfil en Github 🙃)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Licencia 📄
 
-### `npm run build` fails to minify
+2022 Todos los derechos reservados. Creado por [CesarTorres](https://github.com/arqcsr)
+Este reposotorio puede ser usado unicamente con motivos didácticos 😉
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Expresiones de Gratitud 🎁
+
+* Gracias a mi hermosa Princesa Mile por motivarme a continuar adelante con la carrera
+* Gracias al profesor  [alexmarinmendez](https://github.com/alexmarinmendez), por las magníficas clases y sus remeras!
+* Y a mi tutor Manuel Sosa por sus consejos y su gran after class
+* Gracias Totales 🙌🏼
+
+---
+⌨️ con 💪🏼 por [CesarTorres](https://github.com/arqcsr) 😎
+
