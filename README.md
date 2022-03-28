@@ -74,6 +74,11 @@ Y acá un video de muestra:
 https://www.loom.com/share/a71fcfc2bd6248ea83da2bf20711d10d
 ```
 
+Link alternativo:
+
+```
+https://github.com/arqcsr/CesarTorresProyectoReactCoder/blob/master/public/images/others/Flor%20de%20Chocolate%20-%2028%20March%202022.mp4
+```
 
 ## Construido con 🛠️
 
