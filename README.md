@@ -1,6 +1,6 @@
 # Flor de Chocolate SPA E-commerce 🏬
 
-Esta APP es el resultado del trabajo realizado en el curso de React JS en CODER HOUSE. 
+Esta App es el resultado del trabajo realizado en el curso de React JS en CODER HOUSE. 
 
 A lo largo de 14 clases fuí construyendo esta app usando diferentes tecnologías como JS, React, HTML5, CSS3, etc.
 
@@ -41,20 +41,24 @@ https://nodejs.org/es/
 
 ### Pruebas🔧
 
-Para poder ejecutar la APP debes ejecutar en la consola de VSC
+Para poder ejecutar la App debes ejecutar en la consola de VSC
 
 ```
 npm start
 ```
 
 
-## Despliegue 📦
+## Muestras 📦
 
-Puedes ver la APP deployada, en una versión minificada en:
+Acá vas a poder ver algunos screenshoots de la App:
 
 ```
 https://arqcsr.github.io/CesarTorresProyectoReactCoder/
 ```
+
+Y acá un video de muestra:
+
+
 
 
 ## Construido con 🛠️
