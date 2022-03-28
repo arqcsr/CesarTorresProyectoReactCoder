@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/CesarTorresProyectoReactCoder/static/css/main.7bb34a95.css",
+    "main.js": "/CesarTorresProyectoReactCoder/static/js/main.3f6a58a2.js",
+    "index.html": "/CesarTorresProyectoReactCoder/index.html",
+    "main.7bb34a95.css.map": "/CesarTorresProyectoReactCoder/static/css/main.7bb34a95.css.map",
+    "main.3f6a58a2.js.map": "/CesarTorresProyectoReactCoder/static/js/main.3f6a58a2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bb34a95.css",
+    "static/js/main.3f6a58a2.js"
+  ]
+}
