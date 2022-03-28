@@ -1,3 +1,6 @@
+
+![logo](https://raw.githubusercontent.com/arqcsr/CesarTorresProyectoReactCoder/master/public/images/others/logofch.png)
+
 # Flor de Chocolate SPA E-commerce 🏬
 
 Esta App es el resultado del trabajo realizado en el curso de React JS en CODER HOUSE. 
@@ -52,13 +55,24 @@ npm start
 
 Acá vas a poder ver algunos screenshoots de la App:
 
-```
-https://arqcsr.github.io/CesarTorresProyectoReactCoder/
-```
+*Capture 1:
+
+![logo](https://raw.githubusercontent.com/arqcsr/CesarTorresProyectoReactCoder/master/public/images/others/capture1.png)
+
+*Capture 2:
+
+![logo](https://raw.githubusercontent.com/arqcsr/CesarTorresProyectoReactCoder/master/public/images/others/capture2.png)
+
+*Capture 3:
+
+![logo](https://raw.githubusercontent.com/arqcsr/CesarTorresProyectoReactCoder/master/public/images/others/capture3.png)
+
 
 Y acá un video de muestra:
 
-
+```
+https://www.loom.com/share/a71fcfc2bd6248ea83da2bf20711d10d
+```
 
 
 ## Construido con 🛠️
@@ -66,10 +80,15 @@ Y acá un video de muestra:
 Esta APP fue creada usando:
 
 * [NodeJS](https://nodejs.org/es/) - Como entorno para el manejo de Javascipt
+
 * [React](https://es.reactjs.org/) - Biblioteca de Javascipt par crear la interfaz SPA
+
 * [Font Awesome](https://fontawesome.com/) - Biblioteca de iconos 
-* [React Router Dom](https://www.npmjs.com/package/react-router-dom) - Paquete de NodeJs para el manejo de rutas y navegacion dentro de la APP 
+
+* [React Router Dom](https://www.npmjs.com/package/react-router-dom) - Paquete de NodeJs para el manejo de rutas y navegacion dentro de la APP
+ 
 * [SweetAlert](https://sweetalert.js.org/) - Paquete generador de modales con stilos que reemplazan los típicos Alerts nativos del navegador.
+
 * [Firebase](https://firebase.google.com/?hl=es) - Firestore Database de Firebase, para el manejo de la base de datos de los productos del E-commerce y las ordenes de compra (hardcodeadas).
 
 
@@ -100,10 +119,9 @@ Este reposotorio puede ser usado unicamente con motivos didácticos �
 
 * Gracias al profesor  [alexmarinmendez](https://github.com/alexmarinmendez), por las magníficas clases y sus remeras!
 
-* Y a mi tutor Manuel Sosa por sus consejos y su gran after class.
+* Y a mi tutor Manuel Sosa por sus consejos y ayuda constante.
 
 * Gracias Totales 🙌🏼
 
 ---
 ⌨️ con 💪🏼 por [CesarTorres](https://github.com/arqcsr) 😎
-
